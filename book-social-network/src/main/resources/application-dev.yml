@@ -12,7 +12,7 @@ spring:
       hibernate:
         format_sql: true
     database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSQLDialetct
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
   mail:
     host: localhost
     port: 1025
@@ -28,3 +28,14 @@ spring:
         connectiontimeout: 5000
         timeout: 3000
         writetimeout: 5000
+
+application:
+  security:
+    jwt:
+      secret-key: cGljdHVyZWRzaGFsbG93YWNjb3VudHRyb3BpY2Fsc3RlYW15ZXRsYXJnZXJmb2xrc3Q=
+      expiration: 8640000
+  mailing:
+    frontend:
+      activation-url: http:/localhost:4200/activate-account
+server:
+  port: 8088
